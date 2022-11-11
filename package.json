@@ -1,0 +1,32 @@
+{
+	"name": "test-lib",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"build": "vite build",
+		"build:watch": "vite build --watch"
+	},
+	"devDependencies": {
+		"@tsconfig/svelte": "^3.0.0",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"prettier": "^2.6.2",
+		"tslib": "^2.4.0",
+		"typescript": "^4.6.4",
+		"vite": "^3.1.0",
+		"vite-plugin-dts": "^1.7.0"
+	},
+	"main": "./dist/test-lib.umd.js",
+	"module": "./dist/test-lib.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/test-lib.js",
+			"require": "./dist/test-lib.umd.js"
+		}
+	},
+	"dependencies": {
+		"y-protocols": "^1.0.5",
+		"yjs": "^13.5.42"
+	}
+}
